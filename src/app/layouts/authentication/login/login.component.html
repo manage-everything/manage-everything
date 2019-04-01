@@ -1,0 +1,76 @@
+<div class="login-container">
+  <div class="row justify-content-center">
+    <div class="col-md-4 col-sm-6 d-flex align-items-stretch grid-margin">
+      <div class="row flex-grow mt-5">
+        <div class="col-12 grid-margin p-4">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title text-center">
+                <span class="user-icon">
+                  <i class="fa fa-user fa-4x"></i>
+                </span>
+              </h4>
+              <form #loginForm="ngForm" class="forms-sample">
+                <div class="form-group">
+                  <label for="exampleInputEmail1"
+                    >Username / Email address</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    name="username"
+                    autocomplete="off"
+                    placeholder="Enter Username / Email address"
+                    [(ngModel)]="username"
+                    #u_name="ngModel"
+                    required
+                  />
+
+                  <div
+                    class="alert alert-danger mt-3"
+                    *ngIf="u_name.errors && u_name.dirty"
+                  >
+                    <div [hidden]="!u_name.hasError('required')">
+                      Username is required
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="exampleInputPassword1"
+                    name="password"
+                    autocomplete="off"
+                    placeholder="Enter Password"
+                    [(ngModel)]="password"
+                    #pass="ngModel"
+                    required
+                  />
+                  <div
+                    class="alert alert-danger mt-3"
+                    *ngIf="pass.errors && pass.dirty"
+                  >
+                    <div [hidden]="!pass.hasError('required')">
+                      Password is required
+                    </div>
+                  </div>
+                </div>
+                <button
+                  type="submit"
+                  (click)="login()"
+                  class="btn btn-success mr-2"
+                  [disabled]="loginForm.invalid"
+                >
+                  Login
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

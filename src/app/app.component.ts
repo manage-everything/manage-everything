@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"]
 })
-export class AppComponent {
-  title = 'star-admin-angular';
+export class AppComponent implements OnInit {
+  title = "star-admin-angular";
+
+  ngOnInit() {}
 }

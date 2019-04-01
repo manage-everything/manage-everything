@@ -2,7 +2,7 @@
 
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
-@import './assets/styles/variables';
+@import "./assets/styles/variables";
 @import "../node_modules/compass-mixins/lib/compass";
 @import "../node_modules/compass-mixins/lib/animate";
 @import "../node_modules/bootstrap/scss/bootstrap";
@@ -50,3 +50,8 @@
 @import "./assets/styles/utilities";
 @import "./assets/styles/demo";
 /* You can add global styles to this file, and also import other style files */
+
+.btn.disabled,
+.btn:disabled {
+  cursor: not-allowed;
+}

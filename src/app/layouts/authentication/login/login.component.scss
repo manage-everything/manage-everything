@@ -1,0 +1,17 @@
+.card {
+  box-shadow: 0px 2px 2px 2px #dddd;
+}
+
+.login-container {
+  .card {
+    .card-title {
+      .user-icon {
+        i {
+          background: #ddd;
+          padding: 0.42rem 0.9rem;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
